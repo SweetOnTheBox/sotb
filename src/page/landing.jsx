@@ -3,11 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NavigationBar from "../components/NavigationBar";
 import ProductCarousels from "../components/Carousels";
 import "../index.css";
-import { Button } from "react-bootstrap";
 import ReadMoreModal from "../components/Modal";
 import CardProduct from "../components/CardProduct";
 import FormContact from "../components/Forms";
-import FeatherIcon from "feather-icons-react";
 function App() {
   return (
     <Fragment>
@@ -23,28 +21,13 @@ function App() {
                 id="hero-text"
                 // style={{ fontSize: "4rem" }}
               >
-                Make Your World Sweetiess
+                Taste Your Happiness Drug
               </h1>
               <p className="text-center lh-base w-50 mx-auto">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
                 debitis et inventore accusamus! Ducimus dolorum error, delectus
                 et vero libero?
               </p>
-              <div className="d-flex justify-content-center gap-2">
-                <a
-                  className=""
-                  target="_blank"
-                  href="https://www.instagram.com/sweetonthebox/"
-                >
-                  <Button className="mx-auto mb-2 ">
-                    <span>Our Ig </span>
-                    <FeatherIcon icon="instagram" fill="#cd486b" />
-                  </Button>
-                </a>
-                <a className="" href="https://wa.me/6285817165337">
-                  <Button className="mx-auto">Order Now</Button>
-                </a>
-              </div>
             </div>
           </div>
           <ProductCarousels />
