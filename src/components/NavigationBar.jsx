@@ -8,7 +8,7 @@ function NavigationBar() {
     <Navbar collapseOnSelect expand="lg" bg="dark" data-bs-theme="dark">
       <Container>
         <Navbar.Brand href="https://www.instagram.com/sweetonthebox/">
-          <img src="/assets/3.png" alt="sotb" />
+          <img src="assets/3.png" alt="sotb" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
