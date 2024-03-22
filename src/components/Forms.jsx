@@ -10,10 +10,6 @@ function FormContact() {
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
 
     // define
     const phone = "6285817165337";
@@ -24,12 +20,16 @@ function FormContact() {
 
     const formattedMessage = `*Hi* ${name} *from* ${city},\n\n*Message*: ${message}\n\n*Instagram*: ${ig}\n\nThankyou for ordering SOTB!`;
 
-    // construct WhatsApp URL with encoded message
-    const whatsappURL = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(
-      formattedMessage
-    )}`;
-
-    window.open(whatsappURL).focus();
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    } else {
+      // construct WhatsApp URL with encoded message
+      const whatsappURL = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(
+        formattedMessage
+      )}`;
+      window.open(whatsappURL).focus();
+    }
 
     setValidated(true);
   };
