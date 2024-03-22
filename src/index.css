@@ -1,4 +1,5 @@
-/* #hero-text {
+.hero-text,
+.sotb {
   background: rgb(22, 133, 187);
   background: linear-gradient(
     90deg,
@@ -8,7 +9,7 @@
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-} */
+}
 
 body {
   scroll-behavior: smooth;
@@ -16,6 +17,35 @@ body {
 
 #read-more {
   cursor: pointer;
+}
+
+.hero-text {
+  animation: scaleRight 3.2s ease 0s normal forwards;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(3px);
+  transition: all 1s;
+  animation: scaleRight 3.2s ease 0s normal forwards;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@keyframes scaleRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .background {

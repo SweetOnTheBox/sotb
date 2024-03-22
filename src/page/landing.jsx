@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavigationBar from "../components/NavigationBar";
 import ProductCarousels from "../components/Carousels";
@@ -6,7 +6,29 @@ import "../index.css";
 import ReadMoreModal from "../components/Modal";
 import CardProduct from "../components/CardProduct";
 import FormContact from "../components/Forms";
+
 function App() {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    // Cleanup function
+    return () => {
+      hiddenElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []); // Empty dependency array to run this effect only once after initial render
+
   return (
     <Fragment>
       <div className="background">
@@ -14,20 +36,17 @@ function App() {
 
         {/* Hero Section */}
         <div id="hero">
-          <div className="container gap-3 d-sm-flex ">
-            <div>
-              <h1
-                className="text-center mt-4 fw-bold text-wrap"
-                id="hero-text"
-                // style={{ fontSize: "4rem" }}
-              >
-                Taste Your Happiness Drug
+          <div className="container gap-3 d-md-flex ">
+            <div className="col-md-6 col-12 d-flex flex-column justify-content-center align-items-center  mx-auto">
+              <h1 className="hero-text text-center mt-4 fw-bold text-wrap">
+                Sweet On The Box
               </h1>
-              <p className="text-center lh-base w-50 mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-                debitis et inventore accusamus! Ducimus dolorum error, delectus
-                et vero libero?
-              </p>
+              <blockquote className="hero-text text-center lh-base w-75 mx-auto p-2 ">
+                <q>
+                  Taste Your{" "}
+                  <span className="fst-italic fw-bold">Happiness</span> Drug
+                </q>
+              </blockquote>
             </div>
           </div>
           <ProductCarousels />
@@ -37,10 +56,10 @@ function App() {
         {/* About */}
         <div>
           <div className="container">
-            <h1 id="about" className="text-center mt-4 fw-bold">
-              About SOTB
+            <h1 id="about" className="hidden text-center mt-4 fw-bold">
+              About <span className="sotb">SOTB</span>
             </h1>
-            <p className="text-center lh-base w-75 mx-auto p-2">
+            <p className="hidden text-center lh-base w-75 mx-auto p-2">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
               natus, neque hic fuga dolores reiciendis labore? Obcaecati eos
               officiis magnam ullam at. Alias architecto corporis ratione
@@ -58,7 +77,7 @@ function App() {
         </div>
 
         {/* Price */}
-        <div className="container">
+        <div className="hidden container">
           <h1 id="price" className="text-center mt-4 fw-bold">
             Price
           </h1>
@@ -71,7 +90,7 @@ function App() {
         </div>
 
         {/* contact */}
-        <div className="container pb-5">
+        <div className="hidden container pb-5">
           <div className="bg-dark text-white rounded">
             <div id="head">
               <h1 id="contact" className="text-center mt-4 pt-4 fw-bold">
