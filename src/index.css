@@ -1,0 +1,37 @@
+/* #hero-text {
+  background: rgb(22, 133, 187);
+  background: linear-gradient(
+    90deg,
+    rgba(22, 133, 187, 1) 0%,
+    rgba(75, 164, 160, 0.9164040616246498) 45%,
+    rgba(255, 0, 134, 0.8911939775910365) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+body {
+  scroll-behavior: smooth;
+}
+
+#read-more {
+  cursor: pointer;
+}
+
+.background {
+  background-image: linear-gradient(
+    to right bottom,
+    #9deffb,
+    #b6f1ff,
+    #cef2ff,
+    #e3f5ff,
+    #f3f8ff,
+    #edf0ff,
+    #eee7fe,
+    #f3ddf8,
+    #f7c0e5,
+    #fea0c6,
+    #ff819a,
+    #f96565
+  );
+}
