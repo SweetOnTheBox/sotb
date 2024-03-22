@@ -56,5 +56,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      - name: Set environment URL
-        run: echo "::set-env name=URL::https://SweetOnTheBox.github.io/sotb/"
