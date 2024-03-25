@@ -6,15 +6,13 @@ const products = [
     id: 1,
     name: "Strawberry Cake",
     price: 15000,
-    image:
-      "https://i.pinimg.com/564x/6e/74/1c/6e741c1cc99a9895b7b592e99c9c7b52.jpg",
+    image: "assets/oreo.jpg",
   },
   {
     id: 2,
     name: "Oreo Cup Cake",
     price: 20000,
-    image:
-      "https://i.pinimg.com/564x/6e/74/1c/6e741c1cc99a9895b7b592e99c9c7b52.jpg",
+    image: "assets/strawberry.jpg",
   },
 ];
 

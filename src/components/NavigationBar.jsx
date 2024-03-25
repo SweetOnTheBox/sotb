@@ -1,4 +1,3 @@
-import FeatherIcon from "feather-icons-react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -15,7 +14,7 @@ function NavigationBar() {
     window.open(whatsappURL).focus();
   };
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" data-bs-theme="dark">
+    <Navbar collapseOnSelect expand="lg" bg="transparent" data-bs-theme="light">
       <Container>
         <Navbar.Brand href="https://www.instagram.com/sweetonthebox/">
           <img src="assets/3.png" alt="sotb" />
@@ -26,17 +25,19 @@ function NavigationBar() {
             <Nav.Link href="#about">About</Nav.Link>
             <Nav.Link href="#price">Price</Nav.Link>
             <Nav.Link href="#contact">Contact</Nav.Link>
-            <Nav.Link onClick={directToWatsapp}>Order Now</Nav.Link>
+            <Nav.Link onClick={directToWatsapp}>Order</Nav.Link>
             <NavDropdown title="Links" id="collapsible-nav-dropdown">
               <NavDropdown.Item href="https://www.instagram.com/sweetonthebox/">
-                <FeatherIcon icon="instagram" fill="#cd486b" />
+                Instagram
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Tiktok</NavDropdown.Item>
               <NavDropdown.Item href="https://wa.me/6285817165337">
-                <FeatherIcon icon="phone" fill="blue" />
+                Whatsapp
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Forms</NavDropdown.Item>
+              <NavDropdown.Item href="https://forms.gle/6bv6CRWfgnhzouph7">
+                Order Forms
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
