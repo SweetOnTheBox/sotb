@@ -34,13 +34,6 @@ body::-webkit-scrollbar {
   animation: scaleRight 3.2s ease 0s normal forwards;
 }
 
-.background {
-  background-image: url(assets/melt.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
 .hidden {
   opacity: 0;
   filter: blur(3px);
