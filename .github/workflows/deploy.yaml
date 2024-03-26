@@ -64,10 +64,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: dist # Use the correct artifact name
-          path: dist
+          path: "./dist"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          artifact: dist # Use the correct artifact name
