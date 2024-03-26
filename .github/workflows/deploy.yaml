@@ -46,24 +46,12 @@ jobs:
         run: pnpm install
       - name: Build
         run: pnpm run build
-      - name: Check if assets directory exists
-        run: |
-          if [ -d "./assets" ]; then
-            echo "Assets directory found. Proceeding with deployment."
-          else
-            echo "Assets directory not found. Skipping copying assets."
-          fi
-      - name: Copy static assets
-        run: |
-          if [ -d "./assets" ]; then
-            cp -r ./assets ./dist
-          fi
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: dist # Use the correct artifact name
+          # Upload dist folder
           path: "./dist"
       - name: Deploy to GitHub Pages
         id: deployment
