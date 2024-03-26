@@ -4,13 +4,13 @@ import Card from "react-bootstrap/Card";
 const products = [
   {
     id: 1,
-    name: "Strawberry Cake",
+    name: "Oreo Box",
     price: 20000,
     image: "assets/oreo.jpg",
   },
   {
     id: 2,
-    name: "Oreo Cup Cake",
+    name: "Strawberry Cheese Cake",
     price: 25000,
     image: "assets/strawberry.jpg",
   },
