@@ -46,8 +46,18 @@ jobs:
         run: pnpm install
       - name: Build
         run: pnpm run build
+      - name: Check if assets directory exists
+        run: |
+          if [ -d "./assets" ]; then
+            echo "Assets directory found. Proceeding with deployment."
+          else
+            echo "Assets directory not found. Skipping copying assets."
+          fi
       - name: Copy static assets
-        run: cp -r ./assets ./dist
+        run: |
+          if [ -d "./assets" ]; then
+            cp -r ./assets ./dist
+          fi
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
