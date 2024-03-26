@@ -22,10 +22,6 @@ function NavigationBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="d-md-flex justify-content-end w-100 p-1 fs-5 mx-auto">
-            <Nav.Link href="#about">About</Nav.Link>
-            <Nav.Link href="#price">Price</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link>
-            <Nav.Link onClick={directToWatsapp}>Order</Nav.Link>
             <NavDropdown title="Links" id="collapsible-nav-dropdown">
               <NavDropdown.Item href="https://www.instagram.com/sweetonthebox/">
                 Instagram
@@ -39,6 +35,10 @@ function NavigationBar() {
                 Order Forms
               </NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link href="#about">About</Nav.Link>
+            <Nav.Link href="#price">Price</Nav.Link>
+            <Nav.Link href="https://wa.me/6285817165337">Contact</Nav.Link>
+            <Nav.Link onClick={directToWatsapp}>Order</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

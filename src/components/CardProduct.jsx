@@ -5,13 +5,13 @@ const products = [
   {
     id: 1,
     name: "Strawberry Cake",
-    price: 15000,
+    price: 20000,
     image: "assets/oreo.jpg",
   },
   {
     id: 2,
     name: "Oreo Cup Cake",
-    price: 20000,
+    price: 25000,
     image: "assets/strawberry.jpg",
   },
 ];
