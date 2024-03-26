@@ -35,7 +35,7 @@ body::-webkit-scrollbar {
 }
 
 .background {
-  background-image: url(assets/melt.svg);
+  background-image: url(../../assets/melt.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
