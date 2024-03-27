@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 const products = [
   {
     id: 1,
-    name: "Oreo Box",
+    name: "Oreo Box With Fla",
     price: 20000,
     image: "assets/oreo.jpg",
   },

@@ -5,7 +5,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import OrderForms from "./page/order.jsx";
 import ErrorPage from "./page/404.jsx";
 
 const router = createBrowserRouter([
@@ -13,10 +12,6 @@ const router = createBrowserRouter([
     path: "/sotb/",
     element: <App />,
     errorElement: <ErrorPage />,
-  },
-  {
-    path: "/sotb/order",
-    element: <OrderForms />,
   },
 ]);
 
