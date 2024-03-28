@@ -45,7 +45,9 @@ function App() {
                   <blockquote className="hero-text text-center lh-base mx-auto ">
                     <q>
                       Taste Your{" "}
-                      <span className="fst-italic fw-bold">Happiness</span>
+                      <span className="fst-italic fw-bold">
+                        Sweet Happiness
+                      </span>
                     </q>
                   </blockquote>
                 </div>
