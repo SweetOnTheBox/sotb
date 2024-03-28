@@ -9,8 +9,11 @@ function Faq() {
           <ol>
             <li>
               Click on this form{" "}
-              <a href="https://forms.fillout.com/t/rtGYVQLH6sus">
-                https://forms.fillout.com/t/rtGYVQLH6sus
+              <a
+                className="overflow-hidden"
+                href="https://forms.fillout.com/t/rtGYVQLH6sus"
+              >
+                Order
               </a>
             </li>
             <li>
