@@ -26,8 +26,10 @@ function NavigationBar() {
               <NavDropdown.Item href="https://www.instagram.com/sweetonthebox/">
                 Instagram
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Tiktok</NavDropdown.Item>
-              <NavDropdown.Item href="https://wa.me/6285817165337">
+              <NavDropdown.Item href="https://www.tiktok.com/@sweetonthebox">
+                Tiktok
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={directToWatsapp}>
                 Whatsapp
               </NavDropdown.Item>
               <NavDropdown.Divider />
@@ -37,7 +39,7 @@ function NavigationBar() {
             </NavDropdown>
             <Nav.Link href="#about">About</Nav.Link>
             <Nav.Link href="#price">Price</Nav.Link>
-            <Nav.Link href="https://wa.me/6285817165337">Contact</Nav.Link>
+            <Nav.Link onClick={directToWatsapp}>Contact</Nav.Link>
             <Nav.Link onClick={directToWatsapp}>Order</Nav.Link>
           </Nav>
         </Navbar.Collapse>
